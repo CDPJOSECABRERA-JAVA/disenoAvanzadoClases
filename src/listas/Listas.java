@@ -2,6 +2,7 @@ package listas;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import modelo.Bicicleta;
@@ -36,12 +37,13 @@ public class Listas {
        lista.set(1, p1);
 
        //System.out.println(lista.get(1));
+       Collections.sort(lista);
 
        for (Persona per : lista) {
             System.out.println(per);
        }
 
-      
+     
        
        System.out.println("Tamaño de la lista: " + lista.size());
        lista.remove(1);
@@ -66,5 +68,6 @@ public class Listas {
        System.out.println(existe);
        System.out.println(pos);
     }
+
 
 }

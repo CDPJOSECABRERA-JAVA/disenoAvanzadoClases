@@ -1,6 +1,9 @@
 package modelo;
 
-public class Persona {
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class Persona implements Comparable<Persona>{
 
     private String nombre;
     private String apellido;
@@ -8,7 +11,7 @@ public class Persona {
     private String dni;
     private int altura;
     private float peso;
-
+    private SortedMap<String,String> agendaTel = null;
 
     public Persona(){
 
@@ -18,7 +21,7 @@ public class Persona {
         this.setNombre(nombre);
         this.setApellido(apellido);
         this.setDni(dni);
-  
+        this.agendaTel = new TreeMap<String,String>();
     }
 
     public String getDni() {
@@ -107,6 +110,11 @@ public class Persona {
         if (Float.floatToIntBits(peso) != Float.floatToIntBits(other.peso))
             return false;
         return true;
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return this.apellido.compareTo(o.apellido);
     }
 }
 
