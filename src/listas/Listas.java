@@ -60,5 +60,11 @@ public class Listas {
        while (iter.hasNext()) {
         System.out.println(iter.next().toString());
        }
+
+       int pos = lista.indexOf(b1);
+       boolean existe = lista.contains(p1);
+       System.out.println(existe);
+       System.out.println(pos);
     }
+
 }
